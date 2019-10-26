@@ -1,6 +1,6 @@
 {
   "name": "nuxt-parallel-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "repository": "git@github.com:prashantpalikhe/nuxt-parallel-middleware.git",
   "author": "Prashant Palikhe <prashpal09@gmail.com>",
