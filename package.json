@@ -6,10 +6,13 @@
   "author": "Prashant Palikhe <prashpal09@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint lib"
+    "commit": "git-cz",
+    "lint": "eslint lib",
+    "release": "standard-version"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
+    "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-standard": "^14.1.0",
@@ -18,6 +21,18 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "prettier": "^1.18.2"
+    "husky": "^3.0.9",
+    "prettier": "^1.18.2",
+    "standard-version": "^7.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
   }
 }
